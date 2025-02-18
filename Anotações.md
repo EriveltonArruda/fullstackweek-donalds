@@ -82,7 +82,7 @@ Dentro do Neon você vai precisar criar um projeto
 - Region: N. Virginia
 - Compute size: o mínimo possível para não ter custo.
 
-Quando o projeto no Neon estiver criado, copie o código do Postgres que ele disponibiliza e na pasta .env do seu VSCode cole o link no código que tem o nome DATABASE_URL
+Quando o projeto no Neon estiver criado, copie o código do Postgres que o Neon disponibiliza e na pasta .env do seu VSCode cole o link no código que tem o nome DATABASE_URL
 
 ### Migration
 
@@ -102,3 +102,39 @@ Esse processo leva um tempo, quando terminar ele pedirá um nome da migration, c
 Quando for fazer um commit, siga o padrão de commits desse site:
 
 - https://www.conventionalcommits.org/en/v1.0.0/
+
+### seed
+
+É um script utilizado para colocar dados no banco.
+
+Os dados que serão colocados no seed estão no repositório da aula, crie um arquivo chamado seed.ts na pasta do prisma e cole o código.
+
+### onDelete
+
+O script do seed deleta os restaurantes antes de rodar para deixar o banco sempre limpo, imagine que você implemente futuramente uma dashboard que deleta o restaurante, então se deletar um restaurante, também quero deletar suas categorias e seus produtos certo?, para isso usamos o onDelete: Cascade nos relacionamentos.
+
+Essa alteração será feita no arquivo schema da pasta prisma.
+
+Sempre que fizer alguma alteração no prisma, sempre rode uma migration para refletir isso no seu banco
+
+### tsNodes
+
+Para executar o seeds.ts precisaremos de uma biblioteca que executa códigos Typescript, coloque esse comando no Terminal:
+
+- npm install -D ts-node@10.9.2
+
+Só usamos ele em ambiente de desenvolvimento, por isso o -D na instalação.
+
+Agora vá no arquivo package.json e adicione o comando:
+
+"prisma": {
+"seed": "ts-node ./prisma/seed.ts"
+}
+
+Agora rode o comando:
+
+- npx prisma db seed
+
+### Dica de commit
+
+Sempre faça commits bem específicos, no lugar de fazer 1 commit com 10 arquivos, faça 2 commits com 3 ou 4 arquivos cada, isso facilita a transitar as mudanas feitas no código.
