@@ -175,3 +175,13 @@ Para usar, vá na pasta page.tsx e importe o componente.
 ### Arquivo layout
 
 Todo código global entre as páginas será colocado nesse arquivo.
+
+### ESLint
+
+Garante um conjunto de regras dentro do código.
+
+Será criada uma regra de importação para que os arquivos de import biblioteca venham primeiro e os imports de arquivos fiquem embaixo, para isso será necessário instalar um plugin:
+
+- npm install -D eslint-plugin-simple-import-sort@12.1.1
+
+Em seguida importe no arquivo ESLint.
