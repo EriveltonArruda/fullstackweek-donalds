@@ -148,3 +148,26 @@ Toda pasta que você colocar dentro da pasta app e todo arquivo dentro da pasta 
 No VSCode você consegue criar uma pasta ao criar um arquivo, por exemplo:
 
 - products/page.tsx (será criada uma pasta products com um arquivo page.tsx)
+
+### Shadcn UI
+
+Essa biblioteca nos dá componentes prontos, eles também são compatíveis com o tailwind.
+
+Instale com o comando: (usaremos a versão 2.3.0 no projeto)
+
+- npx shadcn@2.3.0 init
+
+Aplique essas opções na hora da instalação:
+
+- style: Default
+- Base color: Neutral
+- css variables: yes
+- dependências: Use --legacy-peer-deps
+
+Outro ponto do shadcn é que você precisa instalar os componentes que você utilizará, em outras bibliotecas você baixa toda a biblioteca, por exemplo:
+
+- npx shadcn@2.3.0 add button (adicionará o componente do botão)
+
+Os componentes ficam na pasta src/components.
+
+Para usar, vá na pasta page.tsx e importe o componente.
