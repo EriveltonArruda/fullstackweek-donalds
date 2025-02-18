@@ -171,3 +171,7 @@ Outro ponto do shadcn é que você precisa instalar os componentes que você uti
 Os componentes ficam na pasta src/components.
 
 Para usar, vá na pasta page.tsx e importe o componente.
+
+### Arquivo layout
+
+Todo código global entre as páginas será colocado nesse arquivo.
