@@ -137,4 +137,14 @@ Agora rode o comando:
 
 ### Dica de commit
 
-Sempre faça commits bem específicos, no lugar de fazer 1 commit com 10 arquivos, faça 2 commits com 3 ou 4 arquivos cada, isso facilita a transitar as mudanas feitas no código.
+Sempre faça commits bem específicos, no lugar de fazer 1 commit com 10 arquivos, faça 2 commits com 3 ou 4 arquivos cada, isso facilita a transitar as mudanças feitas no código.
+
+### Dicas de Next
+
+A pasta App que está dentro de src usa o AppRouter que foi marcado na instalação do Next.
+
+Toda pasta que você colocar dentro da pasta app e todo arquivo dentro da pasta que está dentro da pasta app que tiver o nome "page.tsx", essa pasta será tratada como uma rota.
+
+No VSCode você consegue criar uma pasta ao criar um arquivo, por exemplo:
+
+- products/page.tsx (será criada uma pasta products com um arquivo page.tsx)
