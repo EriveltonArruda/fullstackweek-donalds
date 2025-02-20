@@ -185,3 +185,13 @@ Será criada uma regra de importação para que os arquivos de import biblioteca
 - npm install -D eslint-plugin-simple-import-sort@12.1.1
 
 Em seguida importe no arquivo ESLint.
+
+### Aula 03: Tela do restaurante
+
+Por padrão, todos os componentes criados no Next são server components.
+
+- server components - renderizados no servidor
+- podem ser async
+- podem chamar recursos do back-end (banco de dados)
+- não pode usar hooks (useEffect, useState)
+- não pode ter interatividade (button com onclick)
