@@ -10,34 +10,35 @@ interface ProductHeaderProps {
   product: Pick<Product, 'name' | 'imageUrl'>;
 }
 
-const ProductHeader = ({product}:  ProductHeaderProps) => {
+const ProductHeader = ({ product }: ProductHeaderProps) => {
   const router = useRouter();
   const handleBackClick = () => router.back();
-  return ( <div className="relative w-full h-[300px]">
-  <Button
-    variant="secondary"
-    size="icon"
-    className="absolute left-4 top-4 z-50 rounded-full"
-    onClick={handleBackClick}
-  >
-    <ChevronLeftIcon />
-  </Button>
+  return (
+    <div className="relative w-full h-[300px] min-h-[300px]">
+      <Button
+        variant="secondary"
+        size="icon"
+        className="absolute left-4 top-4 z-50 rounded-full"
+        onClick={handleBackClick}
+      >
+        <ChevronLeftIcon />
+      </Button>
 
 
-  <Image
-    src={product.imageUrl}
-    alt={product.name}
-    fill
-    className="object-contain" />
+      <Image
+        src={product.imageUrl}
+        alt={product.name}
+        fill
+        className="object-contain" />
 
-  <Button
-    variant="secondary"
-    size="icon"
-    className="absolute right-4 top-4 z-50 rounded-full"
-  >
-    <ScrollTextIcon />
-  </Button>
-</div> );
+      <Button
+        variant="secondary"
+        size="icon"
+        className="absolute right-4 top-4 z-50 rounded-full"
+      >
+        <ScrollTextIcon />
+      </Button>
+    </div>);
 }
- 
+
 export default ProductHeader;
