@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "./[slug]/menu/contexts/cart";
+import { Toaster } from "@/components/ui/sonner";
 
 // Definindo a fonte
 const poppins = Poppins({
@@ -26,6 +27,8 @@ export default function RootLayout({
         <CartProvider>
           {children}
         </CartProvider>
+
+        <Toaster />
       </body>
     </html>
   );
